@@ -1,0 +1,8 @@
+
+flask
+numpy
+scipy
+matplotlib
+pycryptodome
+pandas
+sqlalchemy
