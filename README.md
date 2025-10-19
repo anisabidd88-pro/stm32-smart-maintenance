@@ -19,19 +19,19 @@ It contains:
 
 ## Quick start (Linux / macOS / WSL)
 1. Create a virtualenv and install deps:
-   ```bash
+  
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
-   ```
+
 2. Start the server/gateway (this will start UDP listener + Flask web dashboard on http://127.0.0.1:8080):
-   ```bash
+  
    python server/gateway.py
-   ```
+ 
 3. In a separate terminal (with the same venv), run the sensor + edge simulator:
-   ```bash
+   
    python simulator/sensors_sim.py
-   ```
+ 
 4. Open the dashboard: http://127.0.0.1:8080 — you will see live updates, health score and links to FFT and raw log.
 
 ## Notes / Next steps for production
@@ -39,6 +39,4 @@ It contains:
 - The STM32 template shows HAL/I2C/ADC and SX127x (LoRa) integration points but you must adapt pinouts and drivers for your board.
 - For on-device TinyML consider converting a trained TensorFlow Lite model; this demo uses an explainable, online anomaly detector (robust and lightweight).
 
----
 
-**Arabic note (ملاحظة بالعربية):** هذا المشروع جاهز للتنفيذ والمحاكاة على الحاسوب. قمت بإضافة قالب للـSTM32 مع تعليمات لبنائه على جهازك. إذا أردت، أستطيع لاحقًا توليد مشروع STM32CubeMX/STM32CubeIDE مبدأي (بحاجة لبيانات لوحة التطوير الخاصة بك: الـMCU، الـperipherals، والـpins).
